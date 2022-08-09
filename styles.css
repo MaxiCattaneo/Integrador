@@ -8,13 +8,36 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: black;
-    color: whitesmoke;
+    background-color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+}
+
+header img{
+    width: 8rem;
+    margin-left: 3px;
 }
 
 header ul {
     list-style: none;
     display: flex;
     gap: 2rem;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
+}
+header a{
+    text-decoration: none;
+}
+
+header a h3{
+    font-family: 'Roboto', sans-serif;
+}
+
+.inicio{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-right: 1.5rem;
+}
+
+.inicio i{
+    font-size: 0.8cm;
 }
