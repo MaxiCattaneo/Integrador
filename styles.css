@@ -1,3 +1,4 @@
+/* DEFINIENDO VARIABLES */
 :root{
     --yellow: #e7c500;
     --orange: #e66915;
@@ -40,7 +41,13 @@ header ul {
     display: flex;
     gap: 2rem;
     margin-right: 1.5rem;
+    align-items: center;
 }
+
+/* CLASES */
+
+/* PAGINA PRINCIPAL */
+
 
 /* LOGIN */
 
@@ -73,6 +80,9 @@ header ul {
     border-radius: 5px;
     font-weight: bold;
     color: #020A1E;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
 }
 .forget_pass{
     margin-top: 1rem;
@@ -92,6 +102,9 @@ header ul {
     border-radius: 5px;
     font-weight: bold;
     color: #020A1E;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
 }
 .form_login label{
     width: 90%;
@@ -99,7 +112,7 @@ header ul {
 .form_login input{
     width: 100%;
 }
-/* CLASES */
+
 .inicio{
     display: flex;
     align-items: center;
@@ -109,4 +122,100 @@ header ul {
 
 .inicio i{
     font-size: 0.8cm;
+}
+
+/* OLVIDASTE TU CONTRASEÑA */
+.passreset h2{
+    margin: 1rem;
+}
+
+.passreset h3{
+    margin-top: 1rem;
+}
+
+.passreset label{
+    width: 90%;
+    margin-top: 3rem;
+}
+
+.passreset input{
+    width: 100%;
+    height: 1.5rem;
+}
+
+.passreset .button_login{
+    margin-bottom: 2rem;
+}
+
+.emailbutton{
+    background-color: var(--yellow);
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 1rem 0rem 1rem 0rem;
+    border-radius: 5px;
+    display: block;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+}
+
+#sendemail{
+    display: none;
+}
+
+.emailbutton:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+   }
+
+.email_sent{
+    transform: translateY(-1000%);
+}
+
+#sendemail:checked + .email_sent{
+    transform: translateY(0%);
+    transition: all 0.4s ease-out;
+}
+
+/* CREAR CUENTA NUEVA */
+.newacc{
+    gap: 2rem;
+}
+.newacc_form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.newacc_form{
+    width: 100%;
+}
+
+
+.newacc_form label{
+    width: 90%;
+    margin-top: 3rem;
+}
+
+.newacc_form input{
+    width: 100%;
+    height: 1.5rem;
+}
+
+.summit_signin{
+    margin-bottom: 2rem;
+}
+
+.summit_signin input{
+    background-color: var(--yellow);
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    display: block;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
 }
