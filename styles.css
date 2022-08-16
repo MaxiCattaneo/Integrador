@@ -2,6 +2,7 @@
 :root{
     --yellow: #e7c500;
     --orange: #e66915;
+    --cream: #F2F7F2;
 }
 /* TODO */
 * {
@@ -26,35 +27,73 @@ body{
 header{
     position: sticky;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
-    background-color: whitesmoke;
+    background-color: white;
+    padding: 0 85px 0 50px;
 }
 
 header img{
-    width: 8rem;
-    margin-left: 3px;
+    width: 7rem;
 }
 
 header ul {
     display: flex;
     gap: 2rem;
-    margin-right: 1.5rem;
     align-items: center;
 }
-
+a{
+    color: black;
+}
+main{
+    background-color: var(--cream);
+}
 /* CLASES */
 
 /* PAGINA PRINCIPAL */
+.section{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 70px 50px;
+}
 
+.description-container{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.description-container h1 {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.description-container p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.hero-img {
+    background-image: url(./img/mudanza.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 250px;
+    width: 30%;
+    height: 350px;
+    border-radius: 5px;
+}
 
 /* LOGIN */
 
 .login{
     border-radius: 10px;
     margin: 5rem 32%; 
-    background-color: whitesmoke;
+    background-color: var(--cream);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,12 +211,11 @@ header ul {
    }
 
 .email_sent{
-    transform: translateY(-1000%);
+    display: none;
 }
 
 #sendemail:checked + .email_sent{
-    transform: translateY(0%);
-    transition: all 0.4s ease-out;
+    display: flex;
 }
 
 /* CREAR CUENTA NUEVA */
