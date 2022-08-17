@@ -26,6 +26,7 @@ body{
 /* HEADER */
 header{
     position: sticky;
+    top: 0px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -52,12 +53,13 @@ main{
 /* CLASES */
 
 /* PAGINA PRINCIPAL */
+/* HERO */
 .section{
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 70px 50px;
+    padding: 70px 200px;
 }
 
 .description-container{
@@ -87,7 +89,56 @@ main{
     height: 350px;
     border-radius: 5px;
 }
+/* SECCION ABOUT US */
+.about-us{
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 70px 150px;
+    flex-direction: row-reverse;
+}
 
+.about-us .description-container{
+    width: 300px;
+}
+
+.about-us-img {
+    background-image: url(./img/mudanza2.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 250px;
+    width: 30%;
+    height: 335px;
+    border-radius: 5px;
+}
+/* SECCION CARDS */
+.services{
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 70px 260px;
+    flex-direction: column;
+}
+.services .description-container{
+    margin-bottom: 3rem;
+}
+.card-container{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+.card {
+    width: 190px;
+    height: 254px;
+    border-radius: 30px;
+    background: #e0e0e0;
+    box-shadow: 15px 15px 30px #bebebe,
+                -15px -15px 30px #ffffff;
+   }
 /* LOGIN */
 
 .login{
@@ -150,6 +201,7 @@ main{
 }
 .form_login input{
     width: 100%;
+    height: 1.5rem;
 }
 
 .inicio{
