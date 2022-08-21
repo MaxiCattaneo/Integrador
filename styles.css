@@ -3,6 +3,8 @@
     --yellow: #e7c500;
     --orange: #e66915;
     --cream: #F2F7F2;
+    --red: #c1121f;
+    --footer_color: #493838;
 }
 /* TODO */
 * {
@@ -49,6 +51,14 @@ a{
 }
 main{
     background-color: var(--cream);
+}
+
+footer{
+    background-color: var(--cream);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1rem;
 }
 /* CLASES */
 
@@ -236,6 +246,28 @@ main{
     border: 1px var(--yellow);
     border-style: solid;
 }
+
+/* SECCION FOOTER */
+.divider_footer{
+    width: 60%;
+    margin: auto;
+    height: 3px;
+    background-color: var(--red);
+}
+
+.info_footer{
+    display: flex;
+    font-size: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--footer_color);
+}
+.footer_icons{
+    display: flex;
+    gap: 0.8rem;
+    font-size: 20px;
+    color: var(--footer_color);
+}
 /*------------------- LOGIN ----------------------*/
 
 .login{
@@ -311,6 +343,7 @@ main{
 .inicio i{
     font-size: 0.8cm;
 }
+
 
 /*----------------------- OLVIDASTE TU CONTRASEÑA ----------------------------------*/
 .passreset h2{
