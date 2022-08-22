@@ -56,10 +56,9 @@ main{
 footer{
     background-color: var(--cream);
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
     padding-top: 1rem;
 }
+
 /* CLASES */
 
 /* PAGINA PRINCIPAL */
@@ -94,8 +93,7 @@ footer{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 250px;
-    width: 30%;
+    width: 377px;
     height: 350px;
     border-radius: 5px;
 }
@@ -118,8 +116,7 @@ footer{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    min-width: 250px;
-    width: 30%;
+    width: 491px;
     height: 335px;
     border-radius: 5px;
 }
@@ -209,6 +206,9 @@ footer{
     margin-top: 7.5px;
 }
 
+.url_map{
+    display: none;
+}
 .contact2{
     display: flex;
     flex-direction: column;
@@ -248,6 +248,13 @@ footer{
 }
 
 /* SECCION FOOTER */
+
+.footer_all{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
 .divider_footer{
     width: 60%;
     margin: auto;
@@ -261,12 +268,26 @@ footer{
     flex-direction: column;
     align-items: flex-start;
     color: var(--footer_color);
+    width: fit-content;
 }
 .footer_icons{
     display: flex;
-    gap: 0.8rem;
-    font-size: 20px;
+    gap: 0.9rem;
+    font-size: 25px;
     color: var(--footer_color);
+    width: fit-content;
+}
+.footer_icons :first-child>:hover{
+    transition: 1s;
+    color: #3b5998;
+}
+.footer_icons :nth-child(2)>:hover{
+    transition: 1s;
+    color: 	#E1306C;
+}
+.footer_icons :last-child>:hover{
+    transition: 1s;
+    color: 	#00acee;
 }
 /*------------------- LOGIN ----------------------*/
 
@@ -344,6 +365,13 @@ footer{
     font-size: 0.8cm;
 }
 
+.signin_footer{
+    margin-top: 19rem;
+}
+
+.newacc_divider{
+    margin-top: 5.4rem;
+}
 
 /*----------------------- OLVIDASTE TU CONTRASEÑA ----------------------------------*/
 .passreset h2{
@@ -390,14 +418,15 @@ footer{
 .emailbutton:active {
     transform: translate(0.05em, 0.05em);
     box-shadow: 0.05em 0.05em;
-   }
+}
 
 .email_sent{
-    display: none;
+    transform: translateY(-1000%);
 }
 
 #sendemail:checked + .email_sent{
-    display: flex;
+    transition: 2s;
+    transform: translateY(0%) ;
 }
 
 /* CREAR CUENTA NUEVA */
@@ -413,7 +442,6 @@ footer{
 .newacc_form{
     width: 100%;
 }
-
 
 .newacc_form label{
     width: 90%;
@@ -438,4 +466,116 @@ footer{
     border: 3px solid black;
     border-radius: 0.4em;
     box-shadow: 0.1em 0.1em;
+}
+
+/* --------------------RESPONSIVE-------------------- */
+
+@media (max-width: 1628px){
+    .contact2{
+        width: 250px;
+    }
+}
+
+@media (max-width: 1360px){
+    .services{
+        padding: 70px 0px;
+    }
+    .services .description-container{
+        width: 100%;
+        text-align: center;
+        color: var(--red);
+    }
+    .contact-us h2{
+        text-align: center;
+        color: var(--red);
+    }
+}
+
+@media (max-width: 1304px){
+    .contact-us{
+        margin: auto;
+        padding: 70px 5%;
+    }
+    .contact-us-sections{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+    }
+    .contact2{
+        width: 80%;
+    }
+    .contact1{
+        width: 80%;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1260px){
+    .section{
+        padding: 70px 0px;
+        justify-content: space-around;
+    }
+    .about-us{
+        padding: 70px 0px;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 1187px){
+    .footer_all, .divider_footer{
+        width: 80%;
+    }
+}
+
+
+@media (max-width: 973px){
+    .section{
+        padding: 70px 30px;
+    }
+}
+
+@media (max-width: 884px){
+    .section, .about-us{
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .description-container{
+        align-items: center;
+    }
+}
+
+@media (max-width: 703px){
+    .card-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contact-us{
+        padding-top: 20px 5% 70px 5%;
+    }
+}
+
+@media (max-width: 697px){
+    
+}
+
+@media (max-width: 519px){
+    .about-us-img{
+        height: 295px;
+        width: 422px;
+    }
+}
+@media (max-width: 487px){
+    .map{
+        display: none;
+    }
+    .url_map{
+        display: block;
+    }
+}
+
+@media (max-width: 455px){
+    .about-us-img{
+        display: none;
+    }
 }
