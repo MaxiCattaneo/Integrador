@@ -63,6 +63,12 @@ footer{
 
 /* PAGINA PRINCIPAL */
 /* HERO */
+#toggle-menu{
+    display: none;
+}
+.navbar label{
+    display: none;
+}
 .section{
     margin: 0 auto;
     display: flex;
@@ -312,6 +318,7 @@ footer{
     width: 100%;
 }
 
+
 .button_login{
     margin-top: 1rem;
     background-color: var(--orange);
@@ -354,6 +361,14 @@ footer{
     height: 1.5rem;
 }
 
+.login_input{
+    background-color: var(--cream);
+    border-bottom: 1px solid var(--yellow);
+    border-top: unset;
+    border-left: unset;
+    border-right: unset;
+}
+
 .inicio{
     display: flex;
     align-items: center;
@@ -365,7 +380,7 @@ footer{
     font-size: 0.8cm;
 }
 
-.signin_footer{
+.signin_footer_div{
     margin-top: 19rem;
 }
 
@@ -376,10 +391,12 @@ footer{
 /*----------------------- OLVIDASTE TU CONTRASEÑA ----------------------------------*/
 .passreset h2{
     margin: 1rem;
+    text-decoration: underline var(--orange);
 }
 
 .passreset h3{
     margin-top: 1rem;
+    text-align: center;
 }
 
 .passreset label{
@@ -461,7 +478,7 @@ footer{
     background-color: var(--yellow);
     font-size: 16px;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
     display: block;
     border: 3px solid black;
     border-radius: 0.4em;
@@ -526,8 +543,10 @@ footer{
     .footer_all, .divider_footer{
         width: 80%;
     }
+    .login{
+        margin: 5rem 15%;
+    }
 }
-
 
 @media (max-width: 973px){
     .section{
@@ -546,6 +565,10 @@ footer{
 }
 
 @media (max-width: 703px){
+    header{
+        justify-content: space-between;
+        padding: 0px;
+    }
     .card-container{
         flex-direction: column;
         align-items: center;
@@ -553,10 +576,31 @@ footer{
     .contact-us{
         padding-top: 20px 5% 70px 5%;
     }
-}
+    .navbar label{
+        display:block;
+        margin-right: 2rem;
+    }
+    .navbar ul{
+        background-color: var(--cream);
+        width: 100%;
+        height: calc(100vh - 111px);
+        position: absolute;
+        top: 111px;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        transform: translateY(200%);
+        transition: all 0.4s ease-out;
+    }
 
-@media (max-width: 697px){
-    
+    #toggle-menu:checked + .container-items{
+        transform: translateY(0%);
+        transition: all 0.4s ease-out;
+    }
+    .section p{
+        text-align: center;
+    }
 }
 
 @media (max-width: 519px){
@@ -564,7 +608,19 @@ footer{
         height: 295px;
         width: 422px;
     }
+    .login {
+        margin: 5rem 5%;
+    }
+    .mini_header{
+        justify-content: space-between;
+        padding: 0%;
+    }
+    .inicio{
+        gap: 1rem;
+        margin-right: 0.5rem;
+    }
 }
+
 @media (max-width: 487px){
     .map{
         display: none;
@@ -577,5 +633,17 @@ footer{
 @media (max-width: 455px){
     .about-us-img{
         display: none;
+    }
+    .hero-img{
+        width: 100%;
+    }
+}
+
+@media (max-width: 372px){
+    h1{
+        text-align: center;
+    }
+    .contact-us{
+        padding: 70px 3%;
     }
 }
