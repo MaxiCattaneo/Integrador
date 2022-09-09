@@ -432,9 +432,6 @@ footer{
 }
 
 /*----------------------- OLVIDASTE TU CONTRASEÑA ----------------------------------*/
-.passreset{
-    transform: translateY(-61%);
-}
 
 .passreset h2{
     margin: 1rem;
@@ -480,14 +477,6 @@ footer{
     box-shadow: 0.05em 0.05em;
 }
 
-#sendemail{
-    display: none;
-}
-
-#sendemail:checked + .email_sent{
-    transform: translateY(60%) ;
-    transition: all 2s ease-out;
-}
 
 /* CREAR CUENTA NUEVA */
 .newacc{
@@ -610,6 +599,7 @@ footer{
     }
 }
 
+/* MENU HAMBURGUESA */
 @media (max-width: 703px){
     header{
         justify-content: space-between;
@@ -685,6 +675,15 @@ footer{
     }
     .hero-img{
         width: 100%;
+    }
+    .mini_header a h3{
+        display: none;
+    }
+    .mini_header a{
+        margin-right: 3%;
+    }
+    .mini_header img{
+        margin-left: 3%;
     }
 }
 
